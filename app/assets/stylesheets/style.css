@@ -276,14 +276,14 @@ body {
 	}
 	
 	#home-row-2 .col-12 .home-hover {
-		height: 166px;
+		height: 120px;
 		overflow: hidden;
 		padding-top: 26px;
 		transition: all ease-in .5s;
 	}
 	
 	#home-row-2 .col-12 .home-hover:hover {
-		height: 166px;
+		height: 120px;
 		padding-top: 0;
 	}
 
@@ -325,8 +325,7 @@ body {
 	}
 	
 	.subtitle-row {
-		font-size: 35px;
-		padding-bottom: 40px;
+		font-size: 25px;
 		padding-top: 40px;
 	}
 	
@@ -366,8 +365,7 @@ body {
 	}
 	
 	.subtitle-row {
-		font-size: 26px;
-		padding-bottom: 26px;
+		font-size: 16px;
 		padding-top: 26px;
 	}
 	
