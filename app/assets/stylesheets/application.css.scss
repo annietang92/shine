@@ -12,10 +12,38 @@
  *= require_tree .
  */
 
-.yellow{
-	color: #FFDE17;
+.font-yellow{
+	color: #FFDE17 !important;
 }
 
-.white{
-	color: white;
+.font-white{
+	color: white !important;
+}
+
+.font-black{
+	color: black !important;
+}
+
+.font-gray{
+	color:#444 !important;
+}
+.small-space{
+	height:10px;
+}
+.med-space{
+	height:20px;
+}
+.lg-space{
+	height:30px;
+}
+.xlg-space{
+	height:40px;
+}
+
+.bg-trans{
+	background-color: transparent !important;
+}
+
+.bg-semi-trans{
+	background-color: rgba(255,255,255,0.8) !important;
 }

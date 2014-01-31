@@ -220,6 +220,7 @@ jQuery(document).ready(function ($) {
 	});
 });
 
+
 /***************
 * = Menu hover *
 ***************/

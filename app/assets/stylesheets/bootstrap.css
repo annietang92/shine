@@ -429,7 +429,6 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -3604,7 +3603,6 @@ button.close {
 @media screen and (min-width: 768px) {
   .modal-dialog {
     right: auto;
-    left: 50%;
     width: 600px;
     padding-top: 30px;
     padding-bottom: 30px;
