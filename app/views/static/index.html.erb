@@ -2,271 +2,55 @@
 	<div class="container">
 
 		<div class="nav-collapse collapse navbar-responsive-collapse">
-			<ul class="nav row">
-				<li data-slide="1" class="col-12 col-sm-2">
-					<a id="menu-link-1" href="#slide-1" title="Next Section">
-						<span class="font-trans icon icon-home"></span>
-						<span class="text">
-							<%=image_tag "icon.png", class: "m-neg-top", width: "28"%> &nbsp; &nbsp; SHINE
-						</span>
-					</a>
-				</li>
-				<li id = "slide2" data-slide="2" class="col-12 col-sm-2">
-					<a id="menu-link-2" href="#slide-2" title="Next Section">
-						<span class="font-trans icon icon-user font-white"></span>
-						<span class="text">ABOUT</span>
-					</a>
-				</li>
-				<li data-slide="3" class="col-12 col-sm-2">
-					<a id="menu-link-3" href="#slide-3" title="Next Section">
-						<span class="font-trans icon icon-briefcase"></span>
-						<span class="text">MENTORS</span>
-					</a>
-				</li>
-				<li data-slide="4" class="col-12 col-sm-2">
-					<a id="menu-link-4" href="#slide-4" title="Next Section">
-						<span class="font-trans icon icon-gears"></span>
-						<span class="text">APPLY</span>
-					</a>
-				</li>
-				<li data-slide="5" class="col-12 col-sm-2">
-					<a id="menu-link-5" href="#slide-5" title="Next Section">
-						<span class="font-trans icon icon-heart"></span>
-						<span class="text">PRINT</span>
-					</a>
-				</li>
-				<li data-slide="6" class="col-12 col-sm-2">
-					<a id="menu-link-6" href="#slide-6" title="Next Section">
-						<span class="font-trans icon icon-envelope"></span>
-						<span class="text">CONTACT</span>
-					</a>
-				</li>
-			</ul>
-			<!-- <div class="row">
-				<div class="col-sm-2 active-menu"></div>
-			</div> -->
-		</div><!-- /.nav-collapse -->
-	</div><!-- /.container -->
-</div><!-- /.navbar -->
+			<%=render 'navigation'%>
+		</div>
+	</div>
+</div>
 
-
-<!-- === Arrows === -->
-<!-- <div id="arrows">
-	<div id="arrow-up" class="disabled"></div>
-	<div id="arrow-down"></div>
-	<div id="arrow-left" class="disabled visible-lg"></div>
-	<div id="arrow-right" class="disabled visible-lg"></div>
-</div> --><!-- /.arrows -->
-
-
-<!-- === MAIN Background === -->
+<!--  MAIN Background  -->
 <div class="slide story" id="slide-1" data-slide="1">
 	<div class="container">
 		<div id="home-row-1" class="row clearfix">
-			<div class="col-lg-8">
-				<%= image_tag "icon.png", width: "250", class: "animated fadeInLeft" %>
-				<h1 class="font-semibold yellow">SHINE <span class="font-thin white">FOR GIRLS</span></h1>
-				<h4 class="font-thin">Ensuring <span class="font-semibold">every girl</span> has access to academic support <br>
-					through healthy and creative endeavors.</h4>
-			</div><!-- /col-8 -->
-			<div class="col-lg-4">
-				<div class="xlg-space"></div>
-				<section class = "animated fadeInRight panel bg-semi-trans">
-					<div class="panel-body">
-						<header class="panel-heading thick-border bg-yellow text-center">
-            				<h4 class="font-semibold"><strong>ANNOUNCEMENTS</strong></h4>
-          				</header>
-          				<%=render 'events/girl_eng_day'%>
-					</div>
-				</section>
-			</div>
-		</div><!-- /row -->
-	</div><!-- /container -->
-</div><!-- /slide1 -->
+			<%=render 'main_panel'%>
+		</div>
+	</div>
+</div>
 
-<!-- === Slide 2 === -->
+<!--  Slide 2 ABOUT  -->
 <div class="slide story" id="slide-2" data-slide="2">
 	<div class="container">
-		<div class="row title-row">
-			<div class="col-12 font-thin">Are you a 7th grade girl? Do you like to dance? <br><span class="font-semibold">Apply to SHINE!</span></div>
-		</div><!-- /row -->
-		<div class="row line-row">
-			<div class="hr">&nbsp;</div>
-		</div><!-- /row -->
-		<div class="row subtitle-row">
-			<div class="col-12 font-semibold">SHINE’s mission is to positively transform the lives of local young women by cultivating a passion for mathematics through a free 8-week program that incorporates both math and dance. During the summer, the program will be offered in a more intensive form in 4 weeks.</div>
-		</div>
-		<div id="home-row-2" class="row clearfix">
-			<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-toggle="modal" data-target="#modalProgram"><%=image_tag("s02.png")%></div><span>PROGRAM</span></div>
-			<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-toggle="modal" data-target="#modalDates"><%=image_tag "s04.png" %></div><span>DEADLINES</span></div>
-			<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-toggle="modal" data-target="#modalFAQ"><%=image_tag "s01.png" %></div><span>FAQ</span></div>
-			<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-toggle="modal" data-target="#modalSuccess"><%=image_tag "s03.png" %></div><span>SUCCESS</span></div>
-		</div>
-
-<!-- Modal Program -->
-<div class="modal fade" id="modalProgram" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-        <h4 class="modal-title font-black" id="myModalLabel">Program Description</h4>
-      </div>
-      <div class="modal-body font-black">
-        SHINE is an 8-week program that combines formal dance classes with a tailored math curriculum with the overarching goal of establishing a lifelong love of mathematics and creative expression in its students.<br><br>
-        SHINE will run from March 5th to May 7th on Wednesday afternoons from 3:30pm – 5:30 pm and is held on MIT’s beautiful campus at the McCormick Hall, 320 Memorial Drive, Cambridge, MA 02139.<br><br> 
-        The program is taught by trained dance instructors and math mentors from MIT. Following a rigorous curriculum, SHINE incorporates a method of learning called ‘kinesthetic learning’ which allows students to have fun while they progress to different levels of mathematics, eventually covering all the 6th and 7th Grade Math Standards. The dance portion of classes will focus on both choreography and technique of many different dance styles.
-      </div>
-      <div class="modal-footer">
-        
-      </div>
-    </div>
-  </div>
+		<%=render 'about_panel'%>
+	</div>
 </div>
 
-<!-- Modal Deadlines -->
-<div class="modal fade" id="modalDates" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-        <h4 class="modal-title font-black" id="myModalLabel">Dates and Deadlines</h4>
-      </div>
-      <div class="modal-body font-black">
-        Introduce a Girl to Engineering Event (live link to page): February 20, 3:30-5:30<br><br>
-        Deadline to apply to SHINE Spring Program: March 1<br><br>
+<%=render 'modals'%>
 
-		SHINE Spring Program: March 5th to May 7th, 3:30pm – 5:30 pm (excludes weeks of March 24th and April 21st)
 
-      </div>
-      <div class="modal-footer">
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal FAQ -->
-<div class="modal fade" id="modalFAQ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-        <h4 class="modal-title font-black" id="myModalLabel">Facts and Questions</h4>
-      </div>
-      <div class="modal-body font-black">
-        <%= render 'faq'%>
-      </div>
-      <div class="modal-footer">
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Success -->
-<div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-        <h4 class="modal-title font-black" id="myModalLabel">Success</h4>
-      </div>
-      <div class="modal-body font-black">
-        Coming Soon!
-      </div>
-      <div class="modal-footer">
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- /row -->
-		<!-- <div class="row content-row"> -->
-			<!-- <div class="col-12 col-lg-3 col-sm-6">
-				<p><i class="icon icon-eye-open"></i></p>
-				<h2 class="font-thin">Visual <span class="font-semibold">Identity</span></h2>
-				<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-			</div>
-			<div class="col-12 col-lg-3 col-sm-6">
-				<p><i class="icon icon-laptop"></i></p>
-				<h2 class="font-thin">Web <span class="font-semibold">Design</span></h2>
-				<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-			</div>
-			<div class="col-12 col-lg-3 col-sm-6">
-				<p><i class="icon icon-tablet"></i></p>
-				<h2 class="font-thin">Mobile <span class="font-semibold">Apps</span></h2>
-				<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-			</div>
-			<div class="col-12 col-lg-3 col-sm-6">
-				<p><i class="icon icon-pencil"></i></p>
-				<h2 class="font-semibold">Development</h2>
-				<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-			</div> --><!-- /col12 -->
-		<!-- </div> --><!-- /row -->
-	</div><!-- /container -->
-</div><!-- /slide2 -->
-
-<!-- === Slide 4 - Mentors === -->
+<!--  Slide 4 - Mentors  -->
 <div class="slide story" id="slide-3" data-slide="3">
 	<div class="container">
-		<div class="row title-row">
-			<div class="col-12 font-thin">Mentors</div>
-		</div><!-- /row -->
-		<div class="row line-row">
-			<div class="hr">&nbsp;</div>
-		</div><!-- /row -->
-		<div class="row subtitle-row">
-			<div class="col-12 font-semibold">UNDER CONSTRUCTION</div>
-		</div>
+		<%=render 'mentors_panel'%>
 	</div><!-- /container -->
 </div><!-- /slide4 -->
 
 
-<!-- === Slide 4 - Process === -->
+<!--  Slide 4 - Application  -->
 <div class="slide story" id="slide-4" data-slide="4">
 	<div class="container">
-		<div class="row title-row">
-			<div class="col-12 font-thin">Application</div>
-		</div><!-- /row -->
-		<div class="row line-row">
-			<div class="hr">&nbsp;</div>
-		</div><!-- /row -->
-		<div class="row subtitle-row">
-			<div class="col-12 font-semibold">COMING SOON</div>
-		</div>
+		<%=render 'application_panel'%>
 	</div><!-- /container -->
 </div><!-- /slide4 -->
 
-<!-- === Slide 5 === -->
+<!--  Slide 5 - Print  -->
 <div class="slide story" id="slide-5" data-slide="5">
 	<div class="container">
-		<div class="row title-row">
-			<div class="col-12 font-thin">Printable Forms</div>
-		</div><!-- /row -->
-		<div class="row line-row">
-			<div class="hr">&nbsp;</div>
-		</div><!-- /row -->
-		
-		<div class="row subtitle-row">
-			<div class="col-12 font-semibold">COMING SOON</div>
-		</div>
+		<%=render 'print_panel'%>
 	</div><!-- /container -->
 </div><!-- /slide5 -->
 
-<!-- === Slide 6 / Contact === -->
+<!--  Slide 6 / Contact  -->
 <div class="slide story" id="slide-6" data-slide="6">
 	<div class="container">
-		<div class="row title-row">
-			<div class="col-12 font-light">Leave us a <span class="font-semibold">message</span></div>
-		</div><!-- /row -->
-		<div class="row line-row">
-			<div class="hr">&nbsp;</div>
-		</div><!-- /row -->
-		<div class="row subtitle-row">
-			<div class="col-12 font-semibold">UNDER CONSTRUCTION<br><br>
-
-				Please email: shineforgirls@gmail.com for questions</div>
-		</div>
+		<%=render 'contact_panel'%>
 	</div><!-- /container -->
 </div><!-- /Slide 6 -->
