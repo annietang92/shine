@@ -64,6 +64,10 @@
 	border: 8px solid white !important;
 }
 
+.bg-info{
+	background-color: #5bc0de;
+}
+
 .bg-trans{
 	background-color: transparent !important;
 }
@@ -81,4 +85,17 @@
 	li:hover{
 		border-bottom: 5px solid #FFDE17;
 	}
+}
+.text-center{
+	text-align: center;
+}
+.engineeringday_bg{
+	margin:0 !important;
+	padding: 0 !important;
+	height: 100%;
+	width: 100%;
+	background-image: url(image-path('/assets/paint_splatters.png'));
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	background-size: cover;
 }
