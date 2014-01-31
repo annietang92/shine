@@ -1,7 +1,7 @@
 Shine::Application.routes.draw do
 
   root 'static#index'
-  match '/program',  to: 'static#program', via: 'get'
+  match '/engineeringday',  to: 'static#engineeringday', via: 'get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

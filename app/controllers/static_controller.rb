@@ -2,6 +2,6 @@ class StaticController < ApplicationController
 	def index
 	end
 
-	def program
+	def engineeringday
 	end
 end
