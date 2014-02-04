@@ -23,26 +23,42 @@
 <%= yield %>
 
 <footer class="text-center">
-	Site Created by <a href="http://annietang.mit.edu" class="font-white">Annie Tang</a>
+	<small>Site Created by <a href="http://annietang.mit.edu" class="font-white">Annie Tang</a></small>
 </footer>
 
 </body>
-	<!-- fancybox init -->
-	<script>
-	$(document).ready(function(e) {
-		var lis = $('.nav > li');
-		menu_focus( lis[0], 1 );
-		
-		$(".fancybox").fancybox({
-			padding: 10,
-			helpers: {
-				overlay: {
-					locked: false
-				}
-			}
-		});
-	
-	});
-	</script>
+<script type="text/javascript">
+
+$( "#about_link" ).click(function() {
+  $(".toggle").addClass("hide");
+  $("#about").removeClass("hide");
+});
+
+$( "#program_link" ).click(function() {
+  $(".toggle").addClass("hide");
+  $("#program").removeClass("hide");
+});
+
+$( "#deadlines_link" ).click(function() {
+  $(".toggle").addClass("hide");
+  $("#deadlines").removeClass("hide");
+});
+
+$( "#mentors_link" ).click(function() {
+  $(".toggle").addClass("hide");
+  $("#mentors").removeClass("hide");
+});
+
+$( "#success_link" ).click(function() {
+  $(".toggle").addClass("hide");
+  $("#success").removeClass("hide");
+});
+
+$( "#faq_link" ).click(function() {
+  $(".toggle").addClass("hide");
+  $("#faq").removeClass("hide");
+});
+
+</script>
 
 </html>

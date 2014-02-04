@@ -1,0 +1,50 @@
+<div class="row title-row">
+	<div class="col-12 font-semibold">Success<br></div>
+</div><!-- /row -->
+<div class="row line-row">
+	<div class="hr">&nbsp;</div>
+</div><!-- /row -->
+<div class="row subtitle-row">
+	<div class="col-lg-6">
+		<strong>Testimonial</strong><br><br><small>
+		"I love SHINE! It is simply magical there. I went into this program unconfident dancing with other girls I didn’t know and by the end, that totally changed! I made a lot of friends through dancing with them and talking to them about the math practice that was given to us. The staff there are so great, giving their students hope in everything and they are happy to help all the time! This is a program I highly recommend to every girl."<br><br></small>
+    </div>
+    <div class="col-lg-6">
+    <strong>SHINE Diagnostic Results Before and After</strong><br><br>
+		<canvas id="myChart" width="500" height="300"></canvas>
+	</div>
+</div>
+<script type="text/javascript">
+
+var ctx = $("#myChart").get(0).getContext("2d");
+
+var data = {
+	labels : ["MATH (Before/After)","CONFIDENCE (Before/After)"],
+	datasets : [
+		{
+			fillColor : "rgba(220,220,220,0.5)",
+			strokeColor : "rgba(220,220,220,1)",
+			data : [65,56]
+		},
+		{
+			fillColor : "rgba(180,220,180,0.8)",
+			strokeColor : "rgba(180,220,180,1)",
+			data : [91,82]
+		}
+	]
+}
+
+var options = {
+	scaleOverride : true,
+	scaleSteps : 10,
+	scaleStepWidth : 10,
+	scaleStartValue : 0,
+	scaleLineColor : "rgba(0,0,0,0)",
+	barDatasetSpacing : 5,
+	scaleShowGridLines : false,
+	barValueSpacing : 30,
+}
+
+var myNewChart = new Chart(ctx).Bar(data, options);
+
+</script>

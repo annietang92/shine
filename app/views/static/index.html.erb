@@ -1,3 +1,7 @@
+<div id="donate">
+
+</div>
+
 <div class="navbar navbar-fixed-top" data-activeslide="1">
 	<div class="container">
 
@@ -17,36 +21,29 @@
 </div>
 
 <!--  Slide 2 - About  -->
-<div class="toggle_slide about_panel slide story" id="slide-2" data-slide="2">
+<div class="slide story" id="slide-2" data-slide="2">
 	<div class="container">
-		<%=render 'about_panel'%>
+		<div id="about" class="toggle animated fadeIn">
+			<%=render 'about_panel'%>
+		</div>
+		<div id="program" class="toggle hide animated fadeIn">
+			<%=render 'program'%>
+		</div>
+		<div id = "deadlines" class="toggle hide animated fadeIn">
+			<%=render 'deadlines'%>
+		</div>
+		<div id = "success" class="toggle hide animated fadeIn">
+			<%=render 'success'%>
+		</div>
+		<div id = "mentors" class="toggle hide animated fadeIn">
+			<%=render 'mentors'%>
+		</div>
+		<div id = "faq" class="toggle hide animated fadeIn">
+			<%=render 'faq_all'%>
+		</div>
+		<%= render 'about_links' %>
 	</div>
 </div>
-
-<!-- Slide 2 - Program -->
-<div class="toggle_slide program_panel hide slide story " id="slide-2" data-slide="2">
-	<div class="container">
-		<%=render 'program'%>
-	</div>
-</div>
-
-
-<!-- Slide 2 - Deadlines -->
-<div class="toggle_slide deadlines_panel hide slide story " id="slide-2" data-slide="2">
-	<div class="container">
-		<%=render 'deadlines'%>
-	</div>
-</div>
-
-<!-- Slide 2 - FAQ -->
-<div class="toggle_slide faq_panel hide slide story " id="slide-2" data-slide="2">
-	<div class="container">
-		<%=render 'deadlines'%>
-	</div>
-</div>
-
-<%=render 'modals'%>
-
 
 <!--  Slide 4 - Mentors  -->
 <div class="slide story" id="slide-3" data-slide="3">

@@ -1,29 +1,38 @@
 <div id="home-row-2" class="row clearfix">
-	<div class="col-12 col-sm-3">
+	<div class="col-12 col-sm-2">
+		<div id="about_link" class="home-hover navigation-slide">
+			<%=image_tag "a.png" %>
+		</div>
+		<span>ABOUT</span>
+	</div>
+	<div class="col-12 col-sm-2">
 		<div id = "program_link" class="home-hover navigation-slide">
-			<%=image_tag("s02.png")%>
+			<%=image_tag("p.png")%>
 		</div>
 		<span>PROGRAM</span>
 	</div>
-	<div class="col-12 col-sm-3">
+	<div class="col-12 col-sm-2">
 		<div id= "deadlines_link" class="home-hover navigation-slide">
-			<%=image_tag "s04.png" %>
+			<%=image_tag "d.png" %>
 		</div>
-		<span>DEADLINES</span></div>
-	<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-toggle="modal" data-target="#modalFAQ"><%=image_tag "s01.png" %></div><span>FAQ</span></div>
-	<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-toggle="modal" data-target="#modalSuccess"><%=image_tag "s03.png" %></div><span>SUCCESS</span></div>
+		<span>DEADLINES</span>
+	</div>
+	<div class="col-12 col-sm-2">
+		<div id="success_link" class="home-hover navigation-slide">
+			<%=image_tag "s.png" %>
+		</div>
+		<span>SUCCESS</span>
+	</div>
+	<div class="col-12 col-sm-2">
+		<div id="mentors_link" class="home-hover navigation-slide">
+			<%=image_tag "m.png" %>
+		</div>
+		<span>MENTORS</span>
+	</div>
+	<div class="col-12 col-sm-2">
+		<div id= "faq_link" class="home-hover navigation-slide">
+			<%=image_tag "f.png" %>
+		</div>
+		<span>FAQ</span>
+	</div>
 </div>
-
-<script type="text/javascript">
-
-$( "#program_link" ).click(function() {
-  $(".toggle_slide").addClass("hide");
-  $(".program_panel").removeClass("hide");
-});
-
-$( "#deadlines_link" ).click(function() {
-  $(".toggle_slide").addClass("hide");
-  $(".deadlines_panel").removeClass("hide");
-});
-
-</script>
