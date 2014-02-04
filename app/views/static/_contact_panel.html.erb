@@ -5,7 +5,23 @@
 	<div class="hr">&nbsp;</div>
 </div><!-- /row -->
 <div class="row subtitle-row">
-	<div class="col-12 font-semibold">UNDER CONSTRUCTION<br><br>
+	<div class="col-lg-3"></div>
+	<div class="col-lg-6 font-left ">
+	<%= form_for @email do |f| %>
+		<%= f.label :name, class: 'small-text control-label'%>
+    	<%= f.text_field :name, placeholder:"required", class: 'large-text form-control' %>
+    	<%= f.label :email, class: 'small-text control-label'%>
+    	<%= f.text_field :email, placeholder:"required", class: 'large-text form-control' %>
+    	<%= f.label :subject, class: 'small-text control-label'%>
+    	<%= f.text_field :subject, placeholder:"required", class: 'large-text form-control' %>
+    	<%= f.label :message, class: 'small-text control-label'%>
+    	<%= f.text_area :message, placeholder:"required", class: 'large-text form-control' %><br>
+    	<%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+	<%end%>
+	<br><br>Or send an email to: shineforgirls@gmail.com
+</div>
+	<!-- <div class="col-12 font-semibold">UNDER CONSTRUCTION<br><br>
 
-		Please email: shineforgirls@gmail.com for questions</div>
-	</div>
+		Please email: shineforgirls@gmail.com for questions
+	</div> -->
+</div>
