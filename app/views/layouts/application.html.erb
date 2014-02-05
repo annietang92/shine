@@ -58,6 +58,21 @@ $( "#faq_link" ).click(function() {
   window.location.href = "/faq.pdf";
 });
 
+$( "#students_apply" ).hover(
+  function() {
+    $( "#students_overlay" ).removeClass( "hide" );
+  }, function() {
+    $( "#students_overlay" ).addClass( "hide" );
+  }
+);
+
+$( "#mentors_apply" ).hover(
+  function() {
+    $( "#mentors_overlay" ).removeClass( "hide" );
+  }, function() {
+    $( "#mentors_overlay" ).addClass( "hide" );
+  }
+);
 </script>
 
 </html>

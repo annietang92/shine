@@ -35,12 +35,6 @@
 		<div id = "success" class="toggle hide animated fadeIn">
 			<%=render 'success'%>
 		</div>
-		<div id = "mentors" class="toggle hide animated fadeIn">
-			<%=render 'mentors'%>
-		</div>
-		<div id = "faq" class="toggle hide animated fadeIn">
-			<%=render 'faq_all'%>
-		</div>
 		<%= render 'about_links' %>
 	</div>
 </div>
@@ -49,8 +43,8 @@
 <div class="slide story" id="slide-3" data-slide="3">
 	<div class="container">
 		<%=render 'news_panel'%>
-	</div><!-- /container -->
-</div><!-- /slide4 -->
+	</div>
+</div>
 
 
 <!--  Slide 4 - Application  -->
@@ -60,10 +54,10 @@
 	</div>
 </div>
 
-<!--  Slide 5 - Sponsors  -->
+<!--  Slide 5 - Mentors  -->
 <div class="slide story" id="slide-5" data-slide="5">
 	<div class="container">
-		<%=render 'sponsors_panel'%>
+		<%=render 'mentors_panel'%>
 	</div>
 </div>
 
@@ -71,5 +65,12 @@
 <div class="slide story" id="slide-6" data-slide="6">
 	<div class="container">
 		<%=render 'contact_panel'%>
+	</div>
+</div>
+
+<!--  Slide 7 - Sponsors  -->
+<div class="slide story">
+	<div class="container">
+		<%=render 'sponsors_panel'%>
 	</div>
 </div>

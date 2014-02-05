@@ -12,11 +12,34 @@
  *= require_tree .
  */
 
+@import "bootstrap";
+
  /*.scrollable{
  	overflow: scroll;
     height: 300px;
     border: 1px solid rgba(255,255,255,0.3);
  }*/
+
+ .img_rs {
+  @extend .img-responsive;
+  margin: 0 auto;
+ }
+
+ .padding-small{
+ 	padding: 10px;
+ }
+
+ .padding-med{
+ 	padding: 20px;
+ }
+
+ .padding-large{
+ 	padding: 30px;
+ }
+
+ .padding-xlarge{
+ 	padding: 40px;
+ }
 
  .font-left{
  	text-align: left !important;
@@ -57,7 +80,6 @@
 .font-black{
 	color: black !important;
 }
-
 .font-gray{
 	color:#444 !important;
 }
@@ -133,4 +155,42 @@ footer{
 	margin-top: 80px;
 	margin-left: 40px;
 	z-index: 2000;
+}
+
+img.rounded{
+	border-radius: 10px;
+}
+
+img.yellowborder{
+	border: 8px solid white;
+}
+
+img.desaturate { 
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%); 
+}
+
+img.desaturate:hover{
+	-webkit-filter: grayscale(50%);
+	-moz-filter: grayscale(50%);
+	filter: grayscale(50%);
+}
+.absolute{
+	position: absolute !important;
+	z-index: 5000;
+}
+
+.bg-overlay-dark{
+	background-color: rgba(0,0,0,0.4);
+}
+.m-t{
+	margin-top: 40px;
+}
+.margin-xlarge{
+	margin: 50px;
+}
+
+.margin-xlarge-lr{
+	margin: 0 50px;
 }
