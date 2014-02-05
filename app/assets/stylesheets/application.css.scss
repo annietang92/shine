@@ -194,3 +194,12 @@ img.desaturate:hover{
 .margin-xlarge-lr{
 	margin: 0 50px;
 }
+
+a:hover{
+	text-decoration: none !important;
+}
+a.turngray:hover{
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%); 
+}
