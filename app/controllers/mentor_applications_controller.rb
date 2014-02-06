@@ -16,6 +16,6 @@ class MentorApplicationsController < ApplicationController
 private
 
 	def mentor_application_params
-	  params.require(:mentor_application).permit(:last_name, :first_name, :phone, :email, :school, :math_teacher, :math_teacher_phone, :math_teacher_email, :parent, :parent_number, :parent_email, :why, :grades, :dance_experience, :extracurricular, :favorite_subject, :least_favorite_subject, :feel, :get_to, :other_applicants, :hear_about, :other, :signature)
+	  params.require(:mentor_application).permit(:last_name, :first_name, :phone, :email, :interest_shine, :interest_role, :hours, :interview, :free_thurs, :free_wednesday,
 	end
 end
