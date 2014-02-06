@@ -11,6 +11,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140205231126) do
+
+  create_table "mentor_applications", force: true do |t|
+    t.string   "last_name"
+    t.string   "first_name"
+    t.text     "interest_shine"
+    t.string   "interest_role"
+    t.integer  "hours"
+    t.string   "interview"
+    t.string   "free_wednesday"
+    t.string   "free_thurs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "student_applications", force: true do |t|
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "school"
+    t.string   "math_teacher"
+    t.string   "math_teacher_phone"
+    t.string   "math_teacher_email"
+    t.string   "parent"
+    t.string   "parent_number"
+    t.string   "parent_email"
+    t.text     "why"
+    t.text     "grades"
+    t.text     "dance_experience"
+    t.text     "extracurricular"
+    t.string   "favorite_subject"
+    t.string   "least_favorite_subject"
+    t.string   "feel"
+    t.text     "get_to"
+    t.text     "other_applicants"
+    t.text     "hear_about"
+    t.text     "other"
+    t.string   "signature"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
