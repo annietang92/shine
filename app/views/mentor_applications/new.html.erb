@@ -1,0 +1,72 @@
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+	<div class="row text-center">
+		<h1>Mentor Application</h1>
+		Please fill out all sections, and write "N/A" if not applicable
+	</div>
+	<div class="lg-space"></div>
+	<div class="line dashed-line"></div>
+	<div class="lg-space"></div>
+
+<%= form_for @mentor_app do |f| %>
+	<% if @mentor_app.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-error">
+            The form contains <%= pluralize(@mentor_app.errors.count, "error") %>.
+          </div>
+          <ul>
+          <% @mentor_app.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+    <% end %>
+	
+	<div class="col-lg-6">
+		<%= f.label :first_name, class: 'small-text control-label'%>
+		<%= f.text_field :first_name, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :last_name, class: 'small-text control-label'%>
+		<%= f.text_field :last_name, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :phone, "Phone number", class: 'small-text control-label'%>
+		<%= f.text_field :phone, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :email, class: 'small-text control-label'%>
+		<%= f.text_field :email, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :interest_shine, "Why are you interested in SHINE?", class: 'small-text control-label'%>
+		<%= f.text_area :interest_shine, class: 'large-text form-control' %>
+
+		<%= f.label :interest_role, "Please list all roles in which you are interested in preferential order. Include the reason for your interest in that role as well as any relevant experience. Possible roles: Mentor, Webmaster, Outreach Coordinator, Head of Curriculum, Secretary, Treasurer, Director, President", class: 'small-text control-label'%>
+		<%= f.text_area :interest_role, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :hours, "How many hours a week can you dedicate to SHINE?", class: 'small-text control-label'%>
+		<%= f.select :hours, [ '2-3', '3-5', '5-6', '6+' ], { :prompt => "Select", :selected => nil}, {:class => 'large-text form-control'} %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :interview, "When would you be available to for an interview?", class: 'small-text control-label'%>
+		<%= f.select :interview, [ 'Anytime during IAP', 'Weekends during IAP', 'When IAP is over' ], { :prompt => "Select", :selected => nil}, {:class => 'large-text form-control'} %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :free_wednesday, "Are you free on Wednesdays from 3:30-5pm during the semester?", class: 'small-text control-label'%>
+		<%= f.select :free_wednesday, [ 'Yes', 'Now', 'Not sure yet' ], { :prompt => "Select", :selected => nil}, {:class => 'large-text form-control'} %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :free_thurs, "Are you free on Thursdays from 3:30-5pm during the semester?", class: 'small-text control-label'%>
+		<%= f.select :free_thurs, [ 'Yes', 'Now', 'Not sure yet' ], { :prompt => "Select", :selected => nil}, {:class => 'large-text form-control'} %><br><br>
+	</div>
+		<%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+	</div>
+<%end%>
+</div>
+</div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>

@@ -2,7 +2,8 @@ Shine::Application.routes.draw do
 
   root 'static#index'
   match '/engineeringday',  to: 'static#engineeringday', via: 'get'
-
+  resources :student_applications
+  resources :mentor_applications
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

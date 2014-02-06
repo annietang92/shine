@@ -13,7 +13,7 @@
 			<div class="margin-xlarge-lr" id= "mentors_apply">
 				<div id= "mentors_overlay" class="animated fadeInDown hide col-12 absolute text-center bg-overlay-dark m-t">
 					<h1>for <span class="font-semibold">mentors</span></h1><br>
-					<%=link_to "apply", "#", class: "btn btn-info btn-lg" %> 
+					<%=link_to "apply", new_mentor_application_path, class: "btn btn-info btn-lg" %> 
 					<br><br>
 				</div>
 				<%=image_tag "mentors.jpg", id: "mentors-image", class: "img_rs desaturate rounded yellowborder"%>
@@ -24,7 +24,7 @@
 			<div class="margin-xlarge-lr" id= "students_apply">
 				<div id= "students_overlay" class="animated fadeInDown hide col-12 absolute text-center bg-overlay-dark m-t">
 					<h1>for <span class="font-semibold">students</span></h1><br>
-					<%=link_to "apply", "#", class: "btn btn-info btn-lg" %>
+					<%=link_to "apply", new_student_application_path, class: "btn btn-info btn-lg" %>
 					<br><br>
 				</div>
 				<%=image_tag "students.jpg", id: "students-image", class: "img_rs desaturate rounded yellowborder"%>
