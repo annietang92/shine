@@ -172,9 +172,9 @@ img.desaturate {
 }
 
 img.desaturate:hover{
-	-webkit-filter: grayscale(50%);
-	-moz-filter: grayscale(50%);
-	filter: grayscale(50%);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
 }
 .absolute{
 	position: absolute !important;
@@ -234,4 +234,8 @@ a.turngray:hover{
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%); 
+}
+
+.bg-white{
+	background-color: white;
 }
