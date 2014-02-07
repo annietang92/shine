@@ -1,4 +1,5 @@
 <div id="donate">
+	<%=link_to "Click to Donate!", new_donation_path, class: 'btn btn-primary strong'%>
 
 </div>
 
@@ -6,7 +7,7 @@
 	<div class="container">
 
 		<div class="nav-collapse collapse navbar-responsive-collapse">
-			<%=render 'navigation'%>
+			<%=render 'static/navigation'%>
 		</div>
 	</div>
 </div>
@@ -19,7 +20,7 @@
 				 <div class="alert alert-<%= key %>">
 				 	<%= value %></div>
 			<% end %>
-			<%=render 'main_panel'%>
+			<%=render 'static/main_panel'%>
 		</div>
 	</div>
 </div>
@@ -28,25 +29,25 @@
 <div class="slide story" id="slide-2" data-slide="2">
 	<div class="container">
 		<div id="about" class="toggle animated fadeIn">
-			<%=render 'about_panel'%>
+			<%=render 'static/about_panel'%>
 		</div>
 		<div id="program" class="toggle hide animated fadeIn">
-			<%=render 'program'%>
+			<%=render 'static/program'%>
 		</div>
 		<div id = "deadlines" class="toggle hide animated fadeIn">
-			<%=render 'deadlines'%>
+			<%=render 'static/deadlines'%>
 		</div>
 		<div id = "success" class="toggle hide animated fadeIn">
-			<%=render 'success'%>
+			<%=render 'static/success'%>
 		</div>
-		<%= render 'about_links' %>
+		<%= render 'static/about_links' %>
 	</div>
 </div>
 
 <!--  Slide 3 - News  -->
 <div class="slide story" id="slide-3" data-slide="3">
 	<div class="container">
-		<%=render 'news_panel'%>
+		<%=render 'static/news_panel'%>
 	</div>
 </div>
 
@@ -54,24 +55,24 @@
 <!--  Slide 4 - Application  -->
 <div class="slide story" id="slide-4" data-slide="4">
 	<div class="container">
-		<%=render 'application_panel'%>
+		<%=render 'static/application_panel'%>
 	</div>
 </div>
 
 <!--  Slide 5 - Mentors  -->
 <div class="slide story" id="slide-5" data-slide="5">
 	<div class="container">
-		<%=render 'mentors_panel'%>
+		<%=render 'static/mentors_panel'%>
 	</div>
 </div>
 
 <!--  Slide 6 - Contact  -->
 <div class="slide story" id="slide-6" data-slide="6">
 	<div class="container">
-		<%=render 'contact_panel'%>
+		<%=render 'static/contact_panel'%>
 		<div class="lg-space"></div>
 		<div class="lg-space"></div>
 		<div class="lg-space"></div>
-		<%=render 'sponsors'%>
+		<%=render 'static/sponsors'%>
 	</div>
 </div>

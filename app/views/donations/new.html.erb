@@ -1,0 +1,54 @@
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+	<div class="row text-center">
+		<h1>Pledge a Donation</h1>
+	Paypal is coming soon! Please fill out the form below to pledge a donation and we will contact you ASAP.
+	</div>
+	<div class="lg-space"></div>
+	<div class="line dashed-line"></div>
+	<div class="lg-space"></div>
+
+<%= form_for @donation do |f| %>
+	<% if @donation.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-error">
+            The form contains <%= pluralize(@donation.errors.count, "error") %>.
+          </div>
+          <ul>
+          <% @donation.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+    <% end %>
+	
+	<div class="col-lg-12">
+		<%= f.label :name, class: 'small-text control-label'%>
+		<%= f.text_field :name, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :email, class: 'small-text control-label'%>
+		<%= f.text_field :email, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :donation, "Select donation amount", class: 'small-text control-label'%>
+		<%= f.select :donation, [ '$50', '$100', '$200', '$500', '$1,000', '%5,000', '%10,000' ], { :prompt => "Amount", :selected => nil}, {:class => 'large-text form-control'} %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :donation, "Or input donation amount", class: 'small-text control-label'%>
+		<%= f.text_field :donation, placeholder: 'i.e. $75',class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :message, class: 'small-text control-label'%>
+		<%= f.text_area :message, placeholder: 'optional',class: 'large-text form-control' %><br><br>
+
+		<%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+	</div>
+	</div>
+<%end%>
+</div>
+</div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>

@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
 	def index
-		@email = 'asf'
+		@message = Message.new()
 	end
 
 	def engineeringday
