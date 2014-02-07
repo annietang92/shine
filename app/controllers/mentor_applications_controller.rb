@@ -13,7 +13,7 @@ class MentorApplicationsController < ApplicationController
 
 	def destroy
 	  MentorApplication.find(params[:id]).destroy
-	  redirect_to 'index'
+	  redirect_to mentor_applications_path
 	end
 
 	def new

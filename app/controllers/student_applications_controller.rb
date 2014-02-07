@@ -13,7 +13,7 @@ before_action :signed_in_user,
 
 	def destroy
 	  StudentApplication.find(params[:id]).destroy
-	  redirect_to 'index'
+	  redirect_to student_applications_path
 	end
 
 	def new

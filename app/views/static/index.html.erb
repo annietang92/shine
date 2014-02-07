@@ -5,9 +5,9 @@
 	</div>
 	<div class="btn-group-vertical">
 		<% message = "Messages ("+Message.unread.count.to_s+"/"+Message.all.count.to_s+")"%>
-		<%=link_to message, new_donation_path, class: 'btn btn-primary strong'%>
+		<%=link_to message, messages_path, class: 'btn btn-primary strong'%>
 		<% donation = "Donations ("+Donation.unread.count.to_s+"/"+Donation.all.count.to_s+")"%>
-		<%=link_to donation, new_donation_path, class: 'btn btn-primary strong'%>
+		<%=link_to donation, donations_path, class: 'btn btn-primary strong'%>
 		<% mentor = "Mentor Applications ("+MentorApplication.unread.count.to_s+"/"+MentorApplication.all.count.to_s+")"%>
 		<%=link_to mentor, mentor_applications_path, class: 'btn btn-primary strong'%>
 		<% student = "Student Applications ("+StudentApplication.unread.count.to_s+"/"+StudentApplication.all.count.to_s+")"%>
