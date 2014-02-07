@@ -1,6 +1,12 @@
 <div id="donate">
-	<%=link_to "Click to Donate!", new_donation_path, class: 'btn btn-primary strong'%>
-
+	<%if signed_in? %>
+		<%=link_to "Click to Donate!", new_donation_path, class: 'btn btn-primary strong'%>
+	<%else%>
+		<%=link_to "Messages", new_donation_path, class: 'btn btn-primary strong'%>
+		<%=link_to "Mentor Applications", new_donation_path, class: 'btn btn-primary strong'%>
+		<%=link_to "Student Applications", new_donation_path, class: 'btn btn-primary strong'%>
+		<%=link_to "Donations", new_donation_path, class: 'btn btn-primary strong'%>
+	<%end%>
 </div>
 
 <div class="navbar navbar-fixed-top" data-activeslide="1">
