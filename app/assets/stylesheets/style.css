@@ -215,6 +215,7 @@ body {
 
 #slide-1 {
 	background-image: url('/assets/bg2.jpg');
+	transition: background 1s ease;
 	color: #ffffff;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
