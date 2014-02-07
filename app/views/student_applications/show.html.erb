@@ -1,0 +1,106 @@
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+	<div class="row text-center">
+		<h1><%=@student_app.first_name%> <%=@student_app.last_name%></h1>
+		student
+	</div>
+	<div class="lg-space"></div>
+	<div class="line dashed-line"></div>
+	<div class="lg-space"></div>
+
+<%= form_for @student_app do |f| %>
+	
+	<div class="col-lg-6">
+		<%= f.label :first_name,  class: 'small-text control-label'%>
+		<%= f.text_field :first_name, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :last_name, class: 'small-text control-label'%>
+		<%= f.text_field :last_name, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :phone, "Phone number", class: 'small-text control-label'%>
+		<%= f.text_field :phone, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :email, class: 'small-text control-label'%>
+		<%= f.text_field :email, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :school, "School name", class: 'small-text control-label'%>
+		<%= f.text_field :school, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :math_teacher, "Math teacher's name", class: 'small-text control-label'%>
+		<%= f.text_field :math_teacher, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :math_teacher_phone, "Math teacher's phone number", class: 'small-text control-label'%>
+		<%= f.text_field :math_teacher_phone, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :math_teacher_email, "Math teacher's email", class: 'small-text control-label'%>
+		<%= f.text_field :math_teacher_email, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :parent, "Parent/Guardian name", class: 'small-text control-label'%>
+		<%= f.text_field :parent, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :parent_number, "Parent/Guardian phone number", class: 'small-text control-label'%>
+		<%= f.text_field :parent_number, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :parent_email, "Parent/Guardian email", class: 'small-text control-label'%>
+		<%= f.text_field :parent_email, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :why, "Why do you want to participate in SHINE?", class: 'small-text control-label'%>
+		<%= f.text_area :why, :readonly => true,class: 'large-text form-control' %>
+
+		<%= f.label :grades, "What grades do you currently get in your math classes?", class: 'small-text control-label'%>
+		<%= f.text_area :grades, :readonly => true,class: 'large-text form-control' %>
+
+		<%= f.label :dance_experience, "Do you have any previous dance experience? If so, please explain.", class: 'small-text control-label'%>
+		<%= f.text_area :dance_experience, :readonly => true,class: 'large-text form-control' %>
+
+		<%= f.label :extracurricular, "What other extracurricular activities are you involved in?", class: 'small-text control-label'%>
+		<%= f.text_area :extracurricular, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :favorite_subject, "Select your favorite subject", class: 'small-text control-label'%>
+		<%= f.text_field :favorite_subject, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :least_favorite_subject, "Select your least favorite subject", class: 'small-text control-label'%>
+		<%= f.text_field :least_favorite_subject, :readonly => true,class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :feel, "Which of the following best describes how you feel about the program?", class: 'small-text control-label'%>
+		<%= f.text_field :feel, :readonly => true,class: 'large-text form-control' %>
+
+		<%= f.label :get_to, "How would you get to SHINE every week?", class: 'small-text control-label'%>
+		<%= f.text_field :get_to, :readonly => true,class: 'large-text form-control' %>
+
+		<%= f.label :other_applicants, "Do you know anyone else who is applying? If so, please list their names", class: 'small-text control-label'%>
+		<%= f.text_area :other_applicants, :readonly => true,class: 'large-text form-control' %>
+
+		<%= f.label :hear_about, "How did you hear about SHINE?", class: 'small-text control-label'%>
+		<%= f.text_area :hear_about, :readonly => true,class: 'large-text form-control' %>
+
+		<%= f.label :other, "Anything else you feel we should know?", class: 'small-text control-label'%>
+		<%= f.text_area :other, :readonly => true,class: 'large-text form-control' %>
+
+		<%= f.label :signature, "That’s it! By digitally signing below you confirm that you are a 6th or 7th grade girl living in the Boston/Cambridge area.", class: 'small-text control-label'%>
+		<%= f.text_field :signature, :readonly => true,placeholder: 'Your Full Name', class: 'large-text form-control' %><br>
+
+
+		<%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+	</div>
+<%end%>
+</div>
+</div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>

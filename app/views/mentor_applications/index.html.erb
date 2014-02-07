@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="lg-space"></div>
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8">
+		<div class="row text-center">
+		<h1>All Mentor Applications</h1>
+		<div class="lg-space"></div>
+		<div class="line dashed-line"></div>
+		<div class="lg-space"></div>
+		</div>
+		<table>
+			<thead>
+			<tr>
+				<th>Date</th>
+				<th>First</th>
+				<th>Last</th>
+				<th>Interest</th>
+				<th>Roles</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @mentor_apps.each do |app| %>
+			<tr class="<%= cycle('oddrow', 'evenrow') %>">
+				<td><%= app.created_at.strftime("%m/%d/%Y")%></td>
+				<td><%= app.first_name %></td>
+				<td><%= app.last_name %></td>
+				<td><%= truncate(app.interest_shine, length: 20) %></td>
+				<td><%= truncate(app.interest_role, length: 20) %></td>
+				<td><%= link_to 'View', app, class: "font-black" %></td>
+				<td><%= link_to 'Delete', app, method: :delete, data: { confirm: 'Are you sure you want to delete this application?' }, remote: true, class: "font-black"%></td>
+				<td>
+			</tr>
+			<% end %>
+		</tbody>
+		</table>
+	</div>
+</div>

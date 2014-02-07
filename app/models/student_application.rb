@@ -22,4 +22,13 @@ class StudentApplication < ActiveRecord::Base
 	validates :hear_about,  presence: true
 	validates :other,  presence: true
 	validates :signature,  presence: true
+	default_scope -> { order('updated_at DESC') }
+
+	def self.unread
+		StudentApplication.all.where(read: nil)
+	end
+
+	def self.read
+		StudentApplication.all.where(read: "Y")
+	end
 end

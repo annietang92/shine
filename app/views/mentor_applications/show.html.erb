@@ -1,0 +1,58 @@
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+	<div class="row text-center">
+		<h1><%=@mentor_app.first_name%> <%=@mentor_app.last_name%></h1>
+		mentor
+	</div>
+	<div class="lg-space"></div>
+	<div class="line dashed-line"></div>
+	<div class="lg-space"></div>
+
+<%= form_for @mentor_app do |f| %>
+	<div class="col-lg-6">
+		<%= f.label :first_name, class: 'small-text control-label'%>
+		<%= f.text_field :first_name, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :last_name, class: 'small-text control-label'%>
+		<%= f.text_field :last_name, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :phone, "Phone number", class: 'small-text control-label'%>
+		<%= f.text_field :phone, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :email, class: 'small-text control-label'%>
+		<%= f.text_field :email, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-12">
+		<%= f.label :interest_shine, "Why are you interested in SHINE?", class: 'small-text control-label'%>
+		<%= f.text_area :interest_shine, :readonly => true, class: 'large-text form-control' %>
+
+		<%= f.label :interest_role, "Please list all roles in which you are interested in preferential order. Include the reason for your interest in that role as well as any relevant experience. Possible roles: Mentor, Webmaster, Outreach Coordinator, Head of Curriculum, Secretary, Treasurer, Director, President", class: 'small-text control-label'%>
+		<%= f.text_area :interest_role, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :hours, "How many hours a week can you dedicate to SHINE?", class: 'small-text control-label'%>
+		<%= f.text_field :hours, :readonly => true, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :interview, "When would you be available to for an interview?", class: 'small-text control-label'%>
+		<%= f.text_field :interview, :readonly => true, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :free_wednesday, "Are you free on Wednesdays from 3:30-5pm during the semester?", class: 'small-text control-label'%>
+		<%= f.text_field :free_wednesday, :readonly => true, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	<div class="col-lg-6">
+		<%= f.label :free_thurs, "Are you free on Thursdays from 3:30-5pm during the semester?", class: 'small-text control-label'%>
+		<%= f.text_field :free_thurs, :readonly => true, :readonly => true, class: 'large-text form-control' %>
+	</div>
+	</div>
+<%end%>
+</div>
+</div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>

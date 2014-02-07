@@ -9,4 +9,14 @@ class MentorApplication < ActiveRecord::Base
 	validates :interview,  presence: true
 	validates :free_thurs,  presence: true
 	validates :free_wednesday,  presence: true
+
+	default_scope -> { order('updated_at DESC') }
+
+	def self.unread
+		MentorApplication.all.where(read: nil)
+	end
+
+	def self.read
+		MentorApplication.all.where(read: "Y")
+	end
 end
