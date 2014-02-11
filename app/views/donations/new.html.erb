@@ -41,7 +41,7 @@
 	</div>
 	<div class="col-lg-6">
 		<%= f.label :recurring, "Is this a recurring donation?", class: 'small-text control-label'%>
-		<%= f.select :donation, [ 'Not Recurring', 'Monthly', 'Quarterly', 'Biannually', 'Annually'], { :prompt => "Select", :selected => nil}, {:class => 'large-text form-control'} %>
+		<%= f.select :donation, [ 'Monthly', 'Quarterly', 'Biannually', 'Annually', 'Not Recurring'], { :prompt => "Select", :selected => nil}, {:class => 'large-text form-control'} %>
 	</div>
 	<div class="col-lg-12">
 		<%= f.label :message, class: 'small-text control-label'%>
