@@ -1,0 +1,243 @@
+.font-trans{
+	color: transparent !important;
+}
+
+.m-neg-top{
+	margin-top: -5px  !important;
+}
+
+.img_rs {
+	@extend .img-responsive;
+	margin: 0 auto;
+}
+
+.padding-small{
+	padding: 10px;
+}
+
+.padding-med{
+	padding: 20px;
+}
+
+.padding-large{
+	padding: 30px;
+}
+
+.padding-xlarge{
+	padding: 40px;
+}
+
+.font-left{
+	text-align: left !important;
+}
+
+.small-text{
+	font-size: 14px !important;
+}
+
+.large-text{
+	font-size: 16px !important;
+}
+
+.line {
+	width: 100%;
+	height: 2px;
+	margin: 10px 0;
+	font-size: 0;
+	overflow: hidden;
+	background-color: transparent;
+	border-width: 0;
+	border-top: 1px solid #eaedef;
+}
+
+.line-dashed {
+	border-style: dashed;
+	background: transparent;
+}
+
+.font-yellow{
+	color: #FFDE17 !important;
+}
+
+.font-white{
+	color: white !important;
+}
+
+.font-black{
+	color: black !important;
+}
+.font-gray{
+	color:#444 !important;
+}
+.small-space{
+	height:10px;
+}
+.med-space{
+	height:20px;
+}
+.lg-space{
+	height:30px;
+}
+.xlg-space{
+	height:40px;
+}
+
+.bg-yellow{
+	background-color: #FFDE17 !important;
+}
+
+.thick-border{
+	border: 8px solid white !important;
+}
+
+.bg-info{
+	background-color: #5bc0de;
+}
+
+.bg-trans{
+	background-color: transparent !important;
+}
+
+.bg-semi-trans{
+	background-color: rgba(255,255,255,0.8) !important;
+}
+.align-left{
+	text-align: left !important;
+}
+.nav{
+	li{
+		min-height: 48px;
+	}
+	li:hover{
+		border-bottom: 5px solid #FFDE17;
+	}
+}
+.text-center{
+	text-align: center;
+}
+.engineeringday_bg{
+	margin:0 !important;
+	padding: 0 !important;
+	height: 100%;
+	width: 100%;
+	background-image: url(image-path('/assets/paint_splatters.png'));
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+footer{
+	padding: 10px;
+	background-color: #FFDE17;
+	border-top: 5px solid white;
+	color: white;
+	font-size: 16px;
+	width: 100%;
+}
+
+#donate{
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-top: 115px;
+	margin-left: 40px;
+	z-index: 2000;
+}
+
+img.rounded{
+	border-radius: 10px;
+}
+
+img.yellowborder{
+	border: 8px solid white;
+}
+
+img.desaturate { 
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%); 
+}
+
+img.desaturate:hover{
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+.absolute{
+	position: absolute !important;
+	z-index: 5000;
+}
+
+.bg-overlay-dark{
+	background-color: rgba(0,0,0,0.4);
+}
+
+table{
+	margin-top: 20px;
+	font-size: 18px;
+	width: 100%;
+	text-align: left;
+	a{
+		color: white !important;
+		font-weight: bold;
+	}
+}
+
+td{
+	padding-left: 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-top: 1px dashed rgba(255,255,255,0.5);
+}
+
+.rounded{
+	border-radius: 5px;
+}
+
+.white-border{
+	border: 1px solid rgba(255,255,255,0.5);
+}
+.bg-trans-white{
+	background-color: rgba(255,255,255,0.2);
+}
+.m-t{
+	margin-top: 40px;
+}
+.margin-med-lr{
+	margin: 0 40px;
+}
+.margin-xlarge{
+	margin: 50px;
+}
+
+.margin-xlarge-lr{
+	margin: 0 50px;
+}
+
+a:hover{
+	text-decoration: none !important;
+}
+a.turngray:hover{
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%); 
+}
+
+.bg-white{
+	background-color: white;
+}
+
+.strong{
+	font-weight: bold !important;
+}
+
+.text-large{
+	font-size: 18px;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.full{
+	min-height: 100%;
+}
