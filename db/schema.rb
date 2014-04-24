@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140207190328) do
+ActiveRecord::Schema.define(version: 20140424172619) do
+
+  create_table "announcements", force: true do |t|
+    t.string   "date"
+    t.string   "title"
+    t.string   "text"
+    t.string   "link1"
+    t.string   "link2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "link1_title"
+    t.string   "link2_title"
+  end
 
   create_table "donations", force: true do |t|
     t.string   "name"

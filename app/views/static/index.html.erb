@@ -4,6 +4,9 @@
 		ADMIN OPTIONS<br><br>
 	</div>
 	<div class="btn-group-vertical">
+		<%=link_to "New Announcement", new_announcement_path, class: 'btn btn-info strong'%>
+		<%=link_to "New Press", new_announcement_path, class: 'btn btn-info strong'%>
+		<%=link_to "New Event", new_announcement_path, class: 'btn btn-info strong'%>
 		<% message = "Messages ("+Message.unread.count.to_s+"/"+Message.all.count.to_s+")"%>
 		<%=link_to message, messages_path, class: 'btn btn-primary strong'%>
 		<% donation = "Donations ("+Donation.unread.count.to_s+"/"+Donation.all.count.to_s+")"%>
@@ -31,11 +34,11 @@
 <!--  MAIN Background  -->
 <div class="slide story" id="slide-1" data-slide="1">
 	<div class="container">
-		<div id="home-row-1" class="row clearfix">
-			<% flash.each do |key, value| %>
+		<% flash.each do |key, value| %>
 				 <div class="alert alert-<%= key %>">
 				 	<%= value %></div>
 			<% end %>
+		<div id="home-row-1" class="row clearfix">
 			<%=render 'static/main_panel'%>
 		</div>
 	</div>

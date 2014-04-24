@@ -1,51 +1,21 @@
 <div class ="announcements align-left">
-	<p class="font-black">
-		4/24/2014
-	</p>
-	<p class="font-black"><strong>Watch the Interview!</strong></p>
-	<p class="font-gray">
-		If you missed the FOX 25 interview with Kirin this morning, watch it here! A big thank you to Shiri Spear and the whole Fox Boston News Team! 
-	</p>
-	</p>
-	<%= link_to "Watch Clip", "http://www.myfoxboston.com/video?clipId=10087247&autostart=true", class: "btn btn-info lter" %><br><br>
+	<%for announcement in Announcements.all%>
+		<p class="font-black">
+			<%=announcement.date%>
+		</p>
+		<p class="font-black"><strong><%=announcement.title%></strong></p>
+			<p class="font-gray">
+				<%=announcement.text%>
+			</p>
+		</p>
+		<%if !announcement.link1.nil? && announcement.link1 != "" && !announcement.link1_title.nil? && announcement.link1_title != ""%>
+			<%= link_to announcement.link1_title, announcement.link1, class: "btn btn-info lter" %>
+			<br><br>
+		<%end%>
+		<%if !announcement.link2.nil? && announcement.link2 != "" && !announcement.link2_title.nil? && announcement.link2_title != ""%>
+			<%= link_to announcement.link2_title, announcement.link2, class: "btn btn-info lter" %>
+			<br><br>
+		<%end%>
 	<div class="line line-dashed"></div>
-
-	<p class="font-black">
-		4/23/2014
-	</p>
-	<p class="font-black"><strong>Founder Kirin Sinha LIVE on FOX 25!</strong></p>
-	<p class="font-gray">
-		Kirin will be doing a live interview for Fox 25 Thursday (April 24) morning. Tune in to hear about the future of SHINE! 
-	</p>
-	<div class="line line-dashed"></div>
-
-	<p class="font-black">
-		4/18/2014
-	</p>
-	<p class="font-black"><strong>Check us out in the Boston Globe!</strong></p>
-	<p class="font-gray">
-		We were covered in an article by Carolyn Y. Johnson! 
-	</p>
-	<%= link_to "Read Article", "http://www.bostonglobe.com/news/science/2014/04/18/after-school-program-uses-dance-nurture-girls-interest-math/JmszMn1zOR7DPcRiozShpN/story.html", class: "btn btn-info lter" %><br><br>
-	<div class="line line-dashed"></div>
-
-
-	<p class="font-black">
-		1/31/2014
-	</p>
-	<p class="font-black"><strong>Introduce a Girl to Engineering day!</strong></p>
-	<p class="font-gray">
-		Come for a fun-filled day of hands-on activities and see what engineering is all about! SHINE and numerous science organizations in the Boston area will be hosting booths. Girls in K-8 and their mothers are welcome to come and explore.<br><br>
-	</p>
-	<%= link_to "Learn More/RSVP", engineeringday_path, class: "btn btn-info lter" %><br><br>
-	<div class="line line-dashed"></div>
-
-
-	<p class="font-black">
-		1/30/2014
-	</p>
-	<p class="font-black"><strong>Site Revamp!</strong></p>
-	<p class="font-gray">
-		We're beginning to revamp our site! Check back soon for updates!
-	</p>
+	<%end%>
 </div>

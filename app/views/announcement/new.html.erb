@@ -1,0 +1,62 @@
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+  <div class="row text-center">
+    <h1>New Announcement</h1>
+  </div>
+  <div class="lg-space"></div>
+  <div class="line dashed-line"></div>
+  <div class="lg-space"></div>
+
+<%= form_for :announcements, url: announcement_new_path do |f| %>
+  <% if @announcement.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-error">
+            The form contains <%= pluralize(@announcement.errors.count, "error") %>.
+          </div>
+          <ul>
+          <% @announcement.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+    <% end %>
+  
+  <div class="col-lg-12">
+    <%= f.label :date, class: 'small-text control-label'%>
+    <%= f.text_field :date, class: 'large-text form-control' %>
+  </div>
+  <div class="col-lg-12">
+    <%= f.label :title, class: 'small-text control-label'%>
+    <%= f.text_field :title, class: 'large-text form-control' %>
+  </div>
+  <div class="col-lg-12">
+    <%= f.label :text, class: 'small-text control-label'%>
+    <%= f.text_area :text, placeholder: 'optional',class: 'large-text form-control' %>
+  </div>
+  <div class="col-lg-12">
+    <%= f.label :link1_title, class: 'small-text control-label'%>
+    <%= f.text_field :link1_title, placeholder: 'Text on button i.e. Learn More/RSVP (optional)', class: 'large-text form-control' %>
+  </div>
+  <div class="col-lg-12">
+    <%= f.label :link1, class: 'small-text control-label'%>
+    <%= f.text_field :link1, placeholder: 'Full URL i.e. http://www.google.com (optional)',class: 'large-text form-control' %>
+  </div>
+  <div class="col-lg-12">
+    <%= f.label :link2_title, class: 'small-text control-label'%>
+    <%= f.text_field :link2_title, placeholder: 'Text on button i.e. Learn More/RSVP (optional)', class: 'large-text form-control' %>
+  </div>
+  <div class="col-lg-12">
+    <%= f.label :link2, class: 'small-text control-label'%>
+    <%= f.text_field :link2, placeholder: 'Full URL i.e. http://www.google.com (optional)',class: 'large-text form-control' %>
+    <br><br>
+
+    <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+  </div>
+  </div>
+<%end%>
+</div>
+</div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>
+<div class="lg-space"></div>
