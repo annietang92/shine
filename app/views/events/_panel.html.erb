@@ -1,7 +1,11 @@
 <div class ="announcements align-left">
 	<%for announcement in Announcements.all%>
 		<p class="font-black">
-			<%=announcement.date%>
+			<%if signed_in? %>
+				<%=link_to "[Delete]", announcement, method: "delete"%> <%=announcement.date%>
+			<%else%>
+				<%=announcement.date%>
+			<%end%>
 		</p>
 		<p class="font-black"><strong><%=announcement.title%></strong></p>
 			<p class="font-gray">

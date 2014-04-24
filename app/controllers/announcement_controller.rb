@@ -13,14 +13,16 @@ class AnnouncementController < ApplicationController
     @announcement = Announcements.new(announcement_params)
     if @announcement.save
         flash[:success] = "Announcement Created"
-        redirect_to root_url
+        redirect_to root_path
       else
         render 'new'
       end
   end
 
   def destroy
-    Announcements.find(params[:id]).destroy
+    if Announcements.find(params[:id]).destroy
+      flash[:success] = "Deleted Announcement"
+    end
     redirect_to root_path
   end
 
